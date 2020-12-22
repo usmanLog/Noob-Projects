@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   display: flex;
+   font-family: 'Montserrat';
+   height: 100vh;
+   justify-content: center;
+   margin: 0;
+   background-color: #222436;
+}
+
+#main {
+   margin-top: 50px;
+   width: 70%;
+}
+
+.toggle-container {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   color: white;
+}
+
+.toggle {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 200px;
+}
+
+.toggle i {
+   cursor: pointer;
+   font-size: 30px;
+   transition: all 2s ease;
+}
+
+h4 {
+   font-size: 30px;
+   margin: 0px auto 20px auto;
+}
+
+.components {
+   display: flex;
+   margin: 30px 30px;
+   width: 100%;
+   justify-content: center;
+   align-items: center;
+}
+
+.components > div {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   flex: 1;
+   border-radius: 6px;
+   overflow: hidden;
+   box-shadow: 2px 2px 5px 3px hsl(236, 72%, 79%);
+}
+
+.component-two {
+   height: 330px;
+   background-image: linear-gradient(
+      to right,
+      hsl(236, 72%, 79%),
+      hsl(237, 63%, 64%)
+   );
+   color: white;
+   box-shadow: 2px 2px 5px 3px hsl(0, 0%, 100%);
+}
+
+.component-one,
+.component-three {
+   background-color: white;
+   height: 300px;
+}
+
+p {
+   margin-bottom: 0;
+   margin-top: 0;
+}
+
+ul {
+   list-style-type: none;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   transform: translateX(-10%);
+   margin-top: 0px;
+}
+
+ul li {
+   text-align: center;
+   margin-top: 15px;
+   font-size: 13px;
+}
+
+.price-one,
+.price-two,
+.price-three {
+   font-size: 25px;
+   font-weight: 900;
+}
+
+.grad {
+   width: 80%;
+   cursor: pointer;
+   padding: 8px 0px;
+   background: linear-gradient(
+      to right,
+      hsl(236, 72%, 79%),
+      hsl(237, 63%, 64%)
+   );
+   color: white;
+   font-size: 17px;
+   font-weight: 600;
+   font-family: inherit;
+   border-radius: 6px;
+   border: none;
+   box-shadow: 0px 3px 5px 3px hsl(236, 72%, 79%);
+}
+
+.white {
+   width: 80%;
+   color: hsl(237, 63%, 64%);
+   cursor: pointer;
+   padding: 8px 0px;
+   font-size: 17px;
+   font-weight: 600;
+   font-family: inherit;
+   border-radius: 6px;
+   background-color: white;
+   border: none;
+   box-shadow: 0px 1px 5px 3px hsl(0, 0%, 100%);
+}
+
+.white:active {
+   transform: scale(0.98);
+}
+
+.white:hover {
+   background: linear-gradient(
+      to right,
+      hsl(236, 72%, 79%),
+      hsl(237, 63%, 64%)
+   );
+   color: white;
+}
+
+.white:focus {
+   outline: none;
+}
+
+.grad:active {
+   transform: scale(0.98);
+}
+
+.grad:focus {
+   outline: none;
+}
+
+.grad:hover {
+   background: hsl(237, 63%, 64%);
+}
