@@ -1,0 +1,104 @@
+* {
+   box-sizing: border-box;
+   font-family: monospace, sans-serif;
+}
+
+body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   margin: none;
+   overflow: hidden;
+   background-color: blanchedalmond;
+   flex-direction: column;
+}
+
+#container {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: repeat(5, 1fr);
+   grid-gap: 10px;
+   border: 1px solid black;
+   height: 300px;
+   width: 40%;
+   grid-template-areas:
+      'h h h'
+      't t t'
+      't t t'
+      't t t'
+      'r r r';
+   background-color: rgb(198, 204, 209);
+   border-radius: 7px;
+   border: none;
+   overflow: hidden;
+   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+   grid-area: h;
+   text-align: center;
+   font-size: 30px;
+   margin-bottom: 0;
+   font-weight: 500;
+}
+
+#text {
+   grid-area: t;
+   resize: none;
+   font-size: 25px;
+   padding: 5px;
+   border: none;
+   margin: 0px 2px;
+}
+
+#text:focus {
+   outline: none;
+}
+
+#result {
+   grid-area: r;
+}
+
+#check {
+   justify-self: center;
+   padding: 0px 100px;
+   font-size: 18px;
+   font-family: inherit;
+   border: none;
+   border-radius: 5px;
+   margin: 0px 0px 5px 0px;
+   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+#check:focus {
+   outline: none;
+}
+
+#check:active {
+   transform: scale(0.98);
+}
+
+#result-container {
+   height: 100px;
+   width: 30%;
+   background-color: white;
+   border-radius: 7px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   bottom: 10px;
+   left: 0;
+   transform: translateX(-115%);
+   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+   transition: transform 1.2s cubic-bezier(0.23, -0.64, 0.35, 1.84);
+}
+
+#result-container.show {
+   transform: translateX(115%);
+}
+
+#result {
+   font-size: 25px;
+}
