@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <section id="container">
+        <h1>Tip Calculator</h1>
+        <div class="bill-container">
+            <i class="fas fa-dollar-sign"></i>
+            <input type="number" id="bill">
+        </div>
+
+        <div class="tip-container">
+            <label for="range">Tip:</label>
+            <input type="range" id="range" min="0" max="100" value="0">
+            <p id="percentage">0%</p>
+        </div>
+
+        <div class="result-container">
+            <h2>Results</h2>
+            <div class="tip-amount">Tip amount - 0.00</div>
+            <div class="total-amount">Total Bill with Tip amount - 0.00</div>
+        </div>
+
+
+    </section>
+
+
+
+    <script src="https://kit.fontawesome.com/ed09483a17.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
