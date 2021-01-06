@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+body {
+   margin: 0;
+   overflow: hidden;
+   height: 100vh;
+}
+
+#container {
+   height: 100%;
+   width: 100%;
+   display: grid;
+   grid-template-columns: repeat(6, 1fr);
+   grid-template-rows: repeat(3, 1fr);
+   grid-template-areas:
+      'n n n t t t'
+      'n n n t t t'
+      'i i tc tc ic ic';
+}
+
+.nav-container {
+   position: relative;
+   color: white;
+   grid-area: n;
+   display: flex;
+   flex-direction: row;
+   text-align: center;
+   background-image: url('images/desktop-image-hero-1.jpg');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.nav-container i.fa-bars {
+   margin: 10px;
+   display: none;
+   position: absolute;
+}
+
+.nav-container i.fa-times {
+   position: absolute;
+   top: 3px;
+   right: 2px;
+   display: none;
+}
+
+.nav-container h2 {
+   margin-left: 20px;
+}
+
+.nav-container ul {
+   position: relative;
+   display: flex;
+   height: 35px;
+   width: 55%;
+   flex-direction: row;
+   list-style-type: none;
+   margin-top: 22px;
+   align-items: center;
+}
+
+.nav-container ul li {
+   margin-left: 25px;
+}
+
+.nav-container ul li:hover {
+   cursor: pointer;
+   font-weight: 900;
+}
+
+.text-container {
+   grid-area: t;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+   position: relative;
+}
+
+.text-container #prev {
+   position: absolute;
+   left: 0;
+   bottom: 0px;
+   padding: 10px 20px;
+   background-color: rgb(39, 37, 37);
+   color: white;
+   font-size: 18px;
+   border: none;
+}
+
+.text-container #next {
+   position: absolute;
+   left: 55px;
+   bottom: 0px;
+   padding: 10px 20px;
+   background-color: rgb(39, 37, 37);
+   color: white;
+   font-size: 18px;
+   border: none;
+}
+
+.text-container #next:hover,
+#prev:hover {
+   outline: none;
+   background-color: gray;
+}
+
+.text-container #next:focus,
+#prev:focus {
+   outline: none;
+}
+
+.text-container #next:active,
+#prev:active {
+   outline: none;
+   border: 0;
+}
+
+.text {
+   width: 60%;
+   text-align: start;
+}
+
+.text h1 {
+   font-size: 32px;
+   font-weight: 900;
+}
+
+.text small {
+   font-size: 12px;
+   color: gray;
+}
+
+.text p {
+   letter-spacing: 10px;
+   text-transform: capitalize;
+   font-size: 14px;
+}
+
+.text p:hover {
+   color: gray;
+   cursor: pointer;
+}
+
+.img1-container {
+   background-image: url('images/image-about-dark.jpg');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   grid-area: i;
+}
+
+.text1-container {
+   grid-area: tc;
+   text-align: start;
+   display: flex;
+   flex-direction: column;
+}
+
+.text1-container h4 {
+   margin-left: 30px;
+   margin-top: 50px;
+   letter-spacing: 5px;
+   font-weight: 600;
+   font-size: 13px;
+}
+
+.text1-container small {
+   margin: 0px 30px;
+   font-size: 12px;
+}
+
+.img2-container {
+   grid-area: ic;
+   background-image: url('images/image-about-light.jpg');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+@media screen and (max-width: 990px) {
+   .text {
+      width: 100%;
+      text-align: center;
+   }
+}
+
+@media screen and (max-width: 900px) {
+   .nav-container {
+      justify-content: center;
+      margin-top: 0;
+   }
+
+   .nav-container ul {
+      height: 200px;
+      background-color: rgba(255, 255, 255, 0.7);
+      flex-direction: column;
+      color: black;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 45%;
+      transform: translateX(-200%);
+      transition: transform 1s ease;
+      align-items: flex-start;
+   }
+
+   .nav-container ul.show {
+      transform: translateX(0);
+   }
+
+   .nav-container ul li {
+      margin: 5px 0px;
+   }
+
+   .nav-container i.fa-bars {
+      display: block;
+      position: absolute;
+      top: 18px;
+      left: 3px;
+      cursor: pointer;
+   }
+
+   .nav-container i.fa-times {
+      display: block;
+      cursor: pointer;
+   }
+}
+
+@media screen and (max-width: 620px) {
+   body {
+      overflow-y: visible;
+      height: auto;
+   }
+
+   #container {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-areas:
+         'n'
+         't'
+         'i'
+         'tc'
+         'ic';
+      overflow-y: visible;
+      height: 100%;
+   }
+
+   .text h1 {
+      font-size: 20px;
+   }
+
+   .text p {
+      font-size: 14px;
+      margin-bottom: 10px;
+   }
+
+   .text-container {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+   }
+}
