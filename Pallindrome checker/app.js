@@ -18,6 +18,8 @@ function evaluate() {
       result.innerHTML = `Text is a Palindrome`;
    } else {
       result.innerHTML = `Text is not a Palindrome`;
+      resultContainer.style.backgroundColor = 'rgb(230, 100, 100)';
+      resultContainer.style.color = '#fff';
    }
 
    resultContainer.classList.add('show');

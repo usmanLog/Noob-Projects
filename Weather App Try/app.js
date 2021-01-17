@@ -26,7 +26,6 @@ async function weather() {
 
 async function searchResults() {
    const values = await weather();
-   console.log(values);
    updateValues(values);
    updateBackground(values);
 }
